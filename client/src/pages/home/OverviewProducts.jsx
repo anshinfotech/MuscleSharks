@@ -1,47 +1,28 @@
-
 const OverviewProducts = () => {
-  return (
-    <div className="lg:p-3">
-        <div className="flex justify-between">
-        <div className="flex items-center lg:flex-nowrap  flex-wrap">
-                <img src="/muscleshark/ms products_page-0006.jpg" width={"80px"} alt="" />
-                <div>
-                    <a  className="lg:text-lg lg:font-bold md:font-medium sm:text-sm max-sm:text-sm">Mass Gainer</a>
-                </div>
-            </div>
-            <div className="flex items-center flex-wrap lg:flex-nowrap">
-                <img src="/muscleshark/ms products_page-0008.jpg" width={"80px"} alt="" />
-                <div>
-                    <a  className=" lg:text-lg lg:font-bold md:font-medium sm:text-sm max-sm:text-sm">Whey Protein</a>
-                </div>
-            </div>
-            <div className="flex items-center lg:flex-nowrap  flex-wrap">
-                <img src="/muscleshark/ms products_page-0009.jpg" width={"80px"} alt="" />
-                <div>
-                    <a  className="lg:text-lg lg:font-bold md:font-medium sm:text-sm max-sm:text-sm">Pre Workout</a>
-                </div>
-            </div>
-            <div className="flex items-center lg:flex-nowrap  flex-wrap">
-                <img src="/muscleshark/ms products_page-0011.jpg" width={"80px"} alt="" />
-                <div>
-                    <a  className="lg:text-lg lg:font-bold md:font-medium sm:text-sm max-sm:text-sm">Fat Loss</a>
-                </div>
-            </div>
-            <div className="flex items-center lg:flex-nowrap  flex-wrap">
-                <img src="/muscleshark/ms products_page-0013.jpg" width={"80px"} alt="" />
-                <div>
-                    <a  className="lg:text-lg lg:font-bold md:font-medium sm:text-sm max-sm:text-sm">Multivitamins</a>
-                </div>
-            </div>
-            <div className="flex items-center lg:flex-nowrap  flex-wrap">
-                <img src="/muscleshark/ms products_page-0014.jpg" width={"80px"} alt="img" />
-                <div>
-                    <a  className="lg:text-lg lg:font-bold md:font-medium sm:text-sm max-sm:text-sm">Sports & Health</a>
-                </div>
-            </div>
+    return (
+      <div className="lg:p-3">
+        <div className="flex flex-wrap justify-between">
+          <ProductItem imgSrc="/muscleshark/ms products_page-0006.jpg" title="Mass Gainer" />
+          <ProductItem imgSrc="/muscleshark/ms products_page-0008.jpg" title="Whey Protein" />
+          <ProductItem imgSrc="/muscleshark/ms products_page-0009.jpg" title="Pre Workout" />
+          <ProductItem imgSrc="/muscleshark/ms products_page-0011.jpg" title="Fat Loss" />
+          <ProductItem imgSrc="/muscleshark/ms products_page-0013.jpg" title="Multivitamins" />
+          <ProductItem imgSrc="/muscleshark/ms products_page-0014.jpg" title="Sports & Health" />
         </div>
-    </div>
-  )
-}
-
-export default OverviewProducts
+      </div>
+    );
+  };
+  
+  const ProductItem = ({ imgSrc, title }) => {
+    return (
+      <div className="flex items-center lg:flex-nowrap  flex-wrap w-full sm:w-1/2 md:w-1/3 lg:w-1/6 p-2">
+        <img src={imgSrc} width={"80px"} alt={title} />
+        <div className="ml-2">
+          <a className="lg:text-lg lg:font-bold md:font-medium sm:text-sm max-sm:text-sm">{title}</a>
+        </div>
+      </div>
+    );
+  };
+  
+  export default OverviewProducts;
+  
