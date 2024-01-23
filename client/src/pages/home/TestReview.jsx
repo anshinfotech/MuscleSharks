@@ -18,8 +18,8 @@ const Testimonial = () => {
     <div className="relative">
       <div className="w-full h-[600px] relative">
         <video src="/muscleshark/video.mp4" autoPlay loop className="object-cover w-full h-full"></video>
-        <div className="absolute items-center flex flex-col md:flex-row justify-around w-full top-6 mt-4">
-          <div className="text-center md:text-left">
+        <div className="absolute top-6 left-0 right-0 flex flex-col items-center justify-center">
+          <div className="text-center">
             <h1 className="text-4xl font-bold mb-2" style={{ fontFamily: "Cinzel" }}>
               Muscle<span className="text-amber-400">Sharks</span>
             </h1>
@@ -27,7 +27,7 @@ const Testimonial = () => {
               Your Trusted Destination for Premium Gym Supplements
             </p>
           </div>
-          <div className="button-container mt-4 md:mt-0">
+          <div className="button-container mt-4">
             <button className="custom-button w-full md:w-auto max-w-xs md:max-w-none" onClick={openModal}>
               GET YOUR COUPON
             </button>
