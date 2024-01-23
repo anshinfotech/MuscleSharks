@@ -12,13 +12,10 @@ const couponRouter = require("./routes/couponRouter");
 const cartRouter = require("./routes/cartRouter");
 const adminRouter = require("./routes/adminRouter");
 const paymentRouter = require("./routes/paymentRoute");
-const fileURLToPath = require('url')
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 const Razorpay = require("razorpay");
 
 dbConnection();
-app.use(express.static(path.resolve(__dirname, "dist")));
+// app.use(express.static(path.resolve(__dirname, "dist")));
 
 
 app.use(
