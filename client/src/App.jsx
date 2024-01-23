@@ -40,6 +40,7 @@ import SingleBlogPage from "./components/admin/blogs/Singleblogpage";
 import ScrollToTop from "./Scrolltotop";
 import PaymentSuccess from "./components/payment/Paymentsucess";
 
+// axios.defaults.baseURL = "http://api.musclesharks.in";
 axios.defaults.baseURL = "http://localhost:5000";
 axios.defaults.withCredentials = true;
 
