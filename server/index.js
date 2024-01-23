@@ -12,10 +12,14 @@ const couponRouter = require("./routes/couponRouter");
 const cartRouter = require("./routes/cartRouter");
 const adminRouter = require("./routes/adminRouter");
 const paymentRouter = require("./routes/paymentRoute");
+const fileURLToPath = require('url')
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const Razorpay = require("razorpay");
 
 dbConnection();
 app.use(express.static(path.resolve(__dirname, "dist")));
+
 
 app.use(
   cors({
@@ -31,9 +35,10 @@ app.use(
 app.use(cookieParser());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join(__dirname, "dist", "index.html"));
+// });
+
 
 app.use("/api", userRouter);
 app.use("/api", productRoutes);
