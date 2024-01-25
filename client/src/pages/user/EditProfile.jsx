@@ -20,7 +20,7 @@ export default function EditProfile() {
     setShowModal(false);
   };
 
-  console.log(updatedUser);
+  // console.log(updatedUser);
   return (
     <>
     {/* <NavbarComp /> */}

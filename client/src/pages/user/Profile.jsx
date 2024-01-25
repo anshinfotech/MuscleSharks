@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 export const ProfileComponent = () => {
   const loginUser = useSelector((state) => state.registeredUser.user);
-  console.log("Login", loginUser);
+  // console.log("Login", loginUser);
 
   // Check if loginUser is not available yet
   if (!loginUser) {

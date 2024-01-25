@@ -1,26 +1,3 @@
-// import { Carousel } from "flowbite-react";
-
-// export function Corousel() {
-//   return (
-//     <div className="h-[500px] w-[60%] mx-auto mb-32">
-//       <Carousel className="w-full">
-//         
-//         
-//         
-//         
-//         
-//         
-//         
-//         
-//        
-//         
-//         
-
-//       </Carousel>
-//     </div>
-//   );
-// }
-
 import React from "react";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -29,7 +6,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 const Carousel = () => {
   const options={
     loop:true,
-    margin:10,
+    // margin:10,
     arrows:false,
     dots:false,
     responsiveClass:true,
@@ -88,13 +65,6 @@ const Carousel = () => {
         <div class="item">
         <img
           src="/ms/IMG-20231212-WA0001.jpg"
-          alt="..."
-          className="bg-contain w-full h-full"
-        />
-        </div>
-        <div class="item">
-           <img
-          src="/ms/IMG-20231212-WA0002.jpg"
           alt="..."
           className="bg-contain w-full h-full"
         />

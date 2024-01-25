@@ -15,7 +15,8 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="relative w-full h-[600px]">
+    <>
+    <div className="relative w-full h-[600px] mt-16">
       <video
         src="/muscleshark/video.mp4"
         autoPlay
@@ -24,7 +25,7 @@ const Testimonial = () => {
         className="object-cover w-full h-full"
       ></video>
 
-      <div className="absolute top-32 left-0 right-0 bottom-0 flex items-center justify-center text-center text-white z-10">
+      <div className="absolute top-80 left-0 right-0 bottom-0 flex items-center justify-center text-center text-white z-10">
         <div>
           <h1 className="text-4xl font-bold mb-2" style={{ fontFamily: "Cinzel" }}>
             Muscle<span className="text-amber-400">Sharks</span>
@@ -41,9 +42,10 @@ const Testimonial = () => {
         </div>
       </div>
 
+    </div>
       {isModalOpen && <DiscountModal closeModal={closeModal} />}
       <ShopByCategory />
-    </div>
+      </>
   );
 };
 

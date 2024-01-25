@@ -1,10 +1,11 @@
 import React from 'react';
 import Nav from "./Nav";
+import NavbarComp from '../../components/Navbar/Navbar';
 
 const ReturnAndRefundPolicy = () => {
   return (
     <>
-      <Nav />
+      <NavbarComp />
       <div className="bg-amber-100 p-5">
         <div className="bg-white w-[80%] m-auto p-5 mb-10">
           <h1 className="text-xl font-bold mb-10 text-center">MuscleSharks Order Cancellation and Return Policy</h1>

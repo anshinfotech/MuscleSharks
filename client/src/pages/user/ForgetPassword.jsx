@@ -14,7 +14,6 @@ const ForgotPasswordForm = () => {
     function inputHandle(e){
         e.preventDefault();
         setEmail(e.target.value)
-        console.log();
     }
     console.log("Forget Email",email);
 
