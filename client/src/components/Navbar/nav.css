@@ -7,3 +7,9 @@
 .active{
     color: chocolate;
 }
+
+@media screen and (max-width:373px) {
+    .signup{
+        display: none;
+    }
+}

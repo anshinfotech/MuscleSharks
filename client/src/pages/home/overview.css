@@ -1,0 +1,25 @@
+/* @media screen and (max-width:500px) {
+.img{
+    height: 50px;
+    width: 50px;
+}    
+} */
+
+
+@media screen and (max-width:634px) {
+    .txt{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .txt{
+        font-size: 9px;
+    }
+}
+@media screen and (max-width:381px) {
+    .txt{
+        font-weight: bold;
+        font-size: 6.5px;
+    }
+}
