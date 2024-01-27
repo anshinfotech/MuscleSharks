@@ -289,12 +289,12 @@ const CheckoutPage = () => {
             >
               Click for Cash On Delivery
             </button>
-            <button
+            {/* <button
               onClick={handleOnlineOrder}
               className="mt-6 bg-amber-300 text-white py-2 px-4 rounded-md hover:bg-amber-400  focus:bg-amber-500"
             >
               Pay Online
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
