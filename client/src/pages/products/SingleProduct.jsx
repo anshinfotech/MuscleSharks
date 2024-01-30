@@ -73,7 +73,7 @@ const Product = () => {
                       ))}
                     </div>
                     <img
-                      className="ml-auto  mr-auto pt-10 w-[50%] bg-transparent"
+                      className="mx-auto  sm:w-[70%] w-[20%] bg-transparent"
                       src={selectedImage || product.image[0]}
                       alt="Product Image"
                       style={{ background: "transparent" }}
