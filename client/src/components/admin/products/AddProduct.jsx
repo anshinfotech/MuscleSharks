@@ -37,7 +37,8 @@ const AddProduct = () => {
     category: "",
     image: [],
     variants: [],
-    certificate:""
+    certificate:"",
+    instructions:""
   });
   // console.log("IMG",product.images);
   const [variants, setVariants] = useState([]);
@@ -99,29 +100,6 @@ const AddProduct = () => {
                 setProduct({ ...product, name: e.target.value })
               }
             />
-            <p className="text-amber-600 text-xs italic">
-              Please fill out this field.
-            </p>
-          </div>
-          <div className="w-full md:w-1/2 px-3">
-            <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              htmlFor="description"
-            >
-              Description
-            </label>
-            <input
-              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="description"
-              type="text"
-              placeholder="Description of the Product"
-              onChange={(e) =>
-                setProduct({ ...product, description: e.target.value })
-              }
-            />
-            <p className="text-gray-600 text-xs italic">
-              Make it as long and as crazy as you{"'"}d like
-            </p>
           </div>
           <div className="w-full md:w-1/2 px-3">
             <label
@@ -139,6 +117,49 @@ const AddProduct = () => {
               onChange={handlefileUpload}
             />
           </div>
+          <div className="w-full md:w-1/2 px-3">
+            <label
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              htmlFor="description"
+            >
+              Description
+            </label>
+            <textarea
+            rows={5} cols={10}
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="description"
+              type="text"
+              placeholder="Description of the Product"
+              onChange={(e) =>
+                setProduct({ ...product, description: e.target.value })
+              }
+            />
+            <p className="text-gray-600 text-xs italic">
+              Make it as long and as crazy as you{"'"}d like
+            </p>
+          </div>
+          <div className="w-full md:w-1/2 px-3">
+            <label
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              htmlFor="description"
+            >
+              Instructions 
+            </label>
+            <textarea
+            cols={10} rows={5}
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="Instruction"
+              type="text"
+              placeholder="Instructions to be followed"
+              onChange={(e) =>
+                setProduct({ ...product, instructions: e.target.value })
+              }
+            />
+            <p className="text-gray-600 text-xs italic">
+              Make it as long and as crazy as you{"'"}d like
+            </p>
+          </div>
+
         </div>
         <div className="flex flex-wrap -mx-3 mb-2">
           <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">

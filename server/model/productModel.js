@@ -43,6 +43,7 @@ const productSchema = mongoose.Schema({
     type :String ,
     // required : true
   },
+  instructions:String,
   reviews: [
     {
       userId: {

@@ -56,7 +56,7 @@ const Product = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row -mx-4">
             <div className="md:flex-1 px-4">
-              <div className="h-[400px] flex rounded-lg bg-white dark:bg-gray-700 mb-4">
+              <div className="h-[600px] flex rounded-lg bg-white dark:bg-gray-700 mb-4">
                 {loading ? (
                   <Loader />
                 ) : (
@@ -72,12 +72,14 @@ const Product = () => {
                         />
                       ))}
                     </div>
-                    <img
-                      className="mx-auto  sm:w-[70%] w-[20%] bg-transparent"
+                   <div className="flex justify-center items-center w-96">
+                   <img
+                      className=" bg-transparent"
                       src={selectedImage || product.image[0]}
                       alt="Product Image"
                       style={{ background: "transparent" }}
                     />
+                   </div>
                   </>
                 )}
               </div>
@@ -168,10 +170,10 @@ const Product = () => {
 
               <div>
                 <span className="font-bold text-gray-700 dark:text-gray-300">
-                  Product Description:
+                  Instructions 
                 </span>
                 <p className="text-gray-600 dark:text-gray-300 text-sm mt-2">
-                  {product.description}
+                  {product.instructions}
                 </p>
               </div>
             </div>

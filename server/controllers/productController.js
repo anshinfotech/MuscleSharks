@@ -13,7 +13,7 @@ const userModel = require("../model/userModel");
 //     }
 // }
 const addProduct = async (req, res) => {
-    const { name, description, variants, image , category, createdDate,certificate } = req.body;
+    const { name, description, variants, image , category, createdDate,certificate,instructions } = req.body;
   
     try {
       const product = await productModel.create({
@@ -27,7 +27,8 @@ const addProduct = async (req, res) => {
         certificate,
         category,
         // numberOfReviews,
-        createdDate
+        createdDate,
+        instructions
       });
   
       res.status(200).send({ success: true, createdProduct: product });
