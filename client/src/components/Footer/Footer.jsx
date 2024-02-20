@@ -46,8 +46,13 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/pages/return-and-refund-policy" className="hover:underline">
+              <Link to="/pages/return-and-refund-policy" className="mr-4 hover:underline md:mr-6">
                 Return And Refund Policy
+              </Link>
+            </li>
+            <li>
+              <Link to="/pages/deliverypolicy" className="hover:underline">
+                Delivery and Shipping Policy
               </Link>
             </li>
           </ul>

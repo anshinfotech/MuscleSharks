@@ -39,6 +39,7 @@ import Blogpage from "./components/admin/blogs/Blogpage";
 import SingleBlogPage from "./components/admin/blogs/Singleblogpage";
 import ScrollToTop from "./Scrolltotop";
 import PaymentSuccess from "./components/payment/Paymentsucess";
+import Delivery from "./pages/business_pages/Delivery";
 
 axios.defaults.baseURL = "https://api.musclesharks.in";
 // axios.defaults.baseURL = "http://localhost:5000";
@@ -79,6 +80,7 @@ const App = () => {
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/paymentsuccess" element={<PaymentSuccess />} />
         <Route path="/pages/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/pages/deliverypolicy" element={<Delivery />} />
         <Route
           path="/pages/return-and-refund-policy"
           element={<ReturnAndRefundPolicy />}

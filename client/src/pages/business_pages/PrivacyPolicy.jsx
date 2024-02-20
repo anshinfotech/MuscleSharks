@@ -85,7 +85,7 @@ const PrivacyPolicy = () => {
           <section className="mb-8">
             <h2 className="mb-1 font-medium">Contact Us</h2>
             <p className="text-small">
-              If you have any questions about our Privacy Policy, please contact us at [email protected]
+              If you have any questions about our Privacy Policy, please contact us at musclesharks07@gmail.com
             </p>
           </section>
         </div>
