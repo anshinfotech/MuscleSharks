@@ -7,13 +7,13 @@ import { myStore } from './components/redux/store/store.js'
 import firebase from 'firebase/compat/app'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDn8UXIcjNBVVYq-vvgb6zP4qnJHnZKtKc",
-  authDomain: "muscleshark-a284f.firebaseapp.com",
-  projectId: "muscleshark-a284f",
-  storageBucket: "muscleshark-a284f.appspot.com",
-  messagingSenderId: "20469451349",
-  appId: "1:20469451349:web:423fdbeae95d1de7eee2dc",
-  measurementId: "G-5QCPH8RQ8K"
+  apiKey: "AIzaSyCndOajoxM0k-Hb-MG0w6wUJ8tYCgD5om8",
+  authDomain: "musclesharks.firebaseapp.com",
+  projectId: "musclesharks",
+  storageBucket: "musclesharks.appspot.com",
+  messagingSenderId: "635913162489",
+  appId: "1:635913162489:web:5154614b32d2b650599c28",
+  measurementId: "G-M970STC73C"
 };
 firebase.initializeApp(firebaseConfig)
 

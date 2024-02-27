@@ -62,8 +62,8 @@ const AddProduct = () => {
 
     const widgetRef = cloudinaryRef.current.createUploadWidget(
       {
-        cloudName: "dgiw5xfpq",
-        uploadPreset: "gwjd8x4l",
+        cloudName: "dafie9ril",
+        uploadPreset: "rkms5mm2",
       },
       function (error, result) {
         if (result.event === "success") {

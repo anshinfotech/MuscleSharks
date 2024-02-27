@@ -33,8 +33,8 @@ export default function EditProduct({ id }) {
 
     const widgetRef = cloudinaryRef.current.createUploadWidget(
       {
-        cloudName: "dgiw5xfpq",
-        uploadPreset: "gwjd8x4l",
+        cloudName: "dafie9ril",
+        uploadPreset: "rkms5mm2",
       },
       function (error, result) {
         if (result.event === "success") {
@@ -60,7 +60,7 @@ export default function EditProduct({ id }) {
     <>
       <button
         className="bg-slate-500 text-white active:bg-slate-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-        type="button"
+        type="button"c
         onClick={() => setShowModal(true)}
       >
         Edit
