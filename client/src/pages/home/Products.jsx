@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Products = () => {
   const allProduct = useSelector((state) => state.productStore.products);
-  const products = allProduct && allProduct.slice(0, 9);
+  const products = allProduct && allProduct.slice(0, 20);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
