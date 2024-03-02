@@ -236,6 +236,7 @@ const Product = () => {
           <ViewVariant
             variants={selectedProduct.variants}
             closeModal={closeModal}
+            productId={selectedProduct._id} 
           />
         )}
       </div>

@@ -37,7 +37,7 @@ const Products = () => {
                   <h3 className="text-lg font-semibold text-gray-600">{product.name}</h3>
                   {product.variants.length > 0 ? (
                     <div className="flex justify-between">
-                      <p className="text-md font-bold">₹ {product.variants[0].price - product.variants[0].discount}</p>
+                      <p className="text-md font-bold">Sale Price ₹ {product.variants[0].price - product.variants[0].discount}</p>
                       <p className="text-lg font-thin line-through">₹{product.variants[0].price}</p>
                     </div>
                   ) : (

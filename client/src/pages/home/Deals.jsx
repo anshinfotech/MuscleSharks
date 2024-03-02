@@ -24,8 +24,17 @@ const Deals = () => {
                 meets the highest industry standards. Achieve your fitness goals
                 with confidence. Explore our catalog today!
               </p>
+              
             </div>
           </div>
+          <video
+        src="/muscleshark/video2.mp4"
+        autoPlay
+        loop
+        muted
+controls
+        className="object-cover w-full h-full"
+      ></video>
         </div>
 
         <div className="-mx-4 flex flex-wrap">

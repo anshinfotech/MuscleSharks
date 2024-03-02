@@ -94,6 +94,57 @@ const updateProduct=async(req,res)=>{
     }
 }
 
+const updatePrice = async (req, res) => {
+    const { id } = req.params;
+    const { variantId, newPrice } = req.body; // Assuming variantId and newPrice are provided in the request body
+
+    try {
+        const updatedProduct = await productModel.findOneAndUpdate(
+            { _id: id, "variants._id": variantId }, // Find the product by id and variant by variantId
+            { $set: { "variants.$.price": newPrice } }, // Update the price of the matched variant
+            { new: true }
+        );
+
+        if (!updatedProduct) {
+            return res.status(404).send({ success: false, error: "Product or variant not found" });
+        }
+
+        res.status(200).send({ success: true, updatedProduct });
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({ success: false, error: error.message });
+    }
+};
+
+const updateDiscount = async (req, res) => {
+    const { id } = req.params;
+    const { variantId, newDiscount } = req.body; // Assuming variantId and newDiscount are provided in the request body
+
+    console.log("Received request to update discount for productId:", id);
+    console.log("VariantId:", variantId);
+    console.log("New Discount:", newDiscount);
+
+    try {
+        const updatedProduct = await productModel.findOneAndUpdate(
+            { _id: id, "variants._id": variantId },
+            { $set: { "variants.$.discount": newDiscount } },
+            { new: true }
+        );
+
+        if (!updatedProduct) {
+            console.error("Product or variant not found");
+            return res.status(404).send({ success: false, error: "Product or variant not found" });
+        }
+
+        console.log("Discount updated successfully:", updatedProduct);
+        res.status(200).send({ success: true, updatedProduct });
+    } catch (error) {
+        console.error("Error updating discount:", error);
+        res.status(500).send({ success: false, error: error.message });
+    }
+};
+
+
 
 
 
@@ -276,4 +327,4 @@ const getAllProductsSorted = async (req, res) => {
 
 
 
-module.exports={addProduct,getSingleProduct,getAllProduct,getAllProductsSorted,deleteProduct,updateProduct,deleteReview,reviews,getAllReviews}
+module.exports={addProduct,getSingleProduct,getAllProduct,getAllProductsSorted,deleteProduct,updateProduct,deleteReview,reviews,getAllReviews,updatePrice,updateDiscount}

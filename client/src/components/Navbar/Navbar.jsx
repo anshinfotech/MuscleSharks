@@ -193,6 +193,13 @@ export default function NavbarComp() {
               <span className="text-red-600">1800-889-8177</span>
             </p>
           </div>
+          <div className="flex items-center">
+            <a href="https://www.instagram.com/musclesharks07/">
+              <i className="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.instagram.com/musclesharks07/">
+            <p>Follow us on Instagram</p></a>
+          </div>
         </div>
       </div>
     </>
