@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { getAllCart } from "../../components/redux/action/cartAction";
 import Carousel from "../home/Carousel";
 import "./home.css";
+import Offers from "./Offers";
 
 // import { useSelector } from "react-redux"
 
@@ -36,8 +37,7 @@ const Home = () => {
                   27g of pure protein for enhanced lean muscle.
                 </p>
                 <p className="mt-2 mb-6">
-                  100% authentic Lab tested supplements <br /> 
-                  ~ Supplements That
+                  100% authentic Lab tested supplements <br />~ Supplements That
                   Actually Work
                 </p>
                 <Link to={"/products"} className=" bg-amber-600 p-2 pr-4 pl-4">
@@ -57,6 +57,7 @@ const Home = () => {
       </div>
 
       <OverviewProducts />
+      <Offers />
       <OurProducts />
       <Carousel></Carousel>
       <Testimonial />

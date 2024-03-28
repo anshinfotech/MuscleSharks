@@ -7,6 +7,9 @@ import {
   ADD_COUPON_FAIL,
   ADD_COUPON_REQUEST,
   ADD_COUPON_SUCCESS,
+  ADD_OFFER_FAIL,
+  ADD_OFFER_REQUEST,
+  ADD_OFFER_SUCCESS,
   ADD_PRODUCT_FAILED,
   ADD_PRODUCT_REQUEST,
   ADD_PRODUCT_SUCCESS,
@@ -27,6 +30,9 @@ import {
   DELETE_COUPON_FAIL,
   DELETE_COUPON_REQUEST,
   DELETE_COUPON_SUCCESS,
+  DELETE_OFFER_FAIL,
+  DELETE_OFFER_REQUEST,
+  DELETE_OFFER_SUCCESS,
   DELETE_PRODUCT_FAIL,
   DELETE_PRODUCT_REQUEST,
   DELETE_PRODUCT_SUCCESS,
@@ -45,6 +51,9 @@ import {
   GET_ALL_COUPONS_FAIL,
   GET_ALL_COUPONS_REQUEST,
   GET_ALL_COUPONS_SUCCESS,
+  GET_ALL_OFFER_FAIL,
+  GET_ALL_OFFER_REQUEST,
+  GET_ALL_OFFER_SUCCESS,
   REQUEST_TO_LOGIN_ADMIN,
   UPDATE_PRODUCT_FAIL,
   UPDATE_PRODUCT_REQUEST,
@@ -68,6 +77,7 @@ const intinalState = {
   allCoupons: [],
   discountCoupon: 0,
   blogs: [],
+  offers: [],
 };
 
 export const adminFeatures = (state = intinalState, action) => {
@@ -299,6 +309,44 @@ export const adminFeatures = (state = intinalState, action) => {
       toast.error(action.payload, {
         position: "bottom-right",
       });
+      return { ...state, isLoading: false, error };
+
+    case GET_ALL_OFFER_REQUEST:
+      return { ...state, isLoading: true };
+    case GET_ALL_OFFER_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        offers: action.payload,
+        success: "Offers Fetched",
+      };
+
+    case GET_ALL_OFFER_FAIL:
+      return {
+        ...state,
+        isLoading: false,
+        error: action.payload,
+      };
+
+    case ADD_OFFER_REQUEST:
+      return { ...state, isLoading: true };
+    case ADD_OFFER_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        offers: action.payload,
+        success: "Offer Created",
+      };
+
+    case ADD_OFFER_FAIL:
+      return { ...state, isLoading: false, error: action.payload };
+
+    case DELETE_OFFER_REQUEST:
+      return { ...state, isLoading: true };
+    case DELETE_OFFER_SUCCESS:
+      return { ...state, isLoading: false, offers: action.payload };
+
+    case DELETE_OFFER_FAIL:
       return { ...state, isLoading: false, error };
 
     default:

@@ -96,6 +96,7 @@ const updateProduct=async(req,res)=>{
 
 const updatePrice = async (req, res) => {
     const { id } = req.params;
+    
     const { variantId, newPrice } = req.body; // Assuming variantId and newPrice are provided in the request body
 
     try {

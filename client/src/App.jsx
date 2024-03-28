@@ -40,9 +40,10 @@ import SingleBlogPage from "./components/admin/blogs/Singleblogpage";
 import ScrollToTop from "./Scrolltotop";
 import PaymentSuccess from "./components/payment/Paymentsucess";
 import Delivery from "./pages/business_pages/Delivery";
+import Offer from "./components/admin/offers/Offers";
 
-axios.defaults.baseURL = "https://api.musclesharks.in";
-// axios.defaults.baseURL = "http://localhost:5000";
+// axios.defaults.baseURL = "https://api.musclesharks.in";
+axios.defaults.baseURL = "http://localhost:5000";
 axios.defaults.withCredentials = true;
 
 const App = () => {
@@ -109,6 +110,7 @@ const App = () => {
           element={isAdmin ? <Coupon /> : <NotAcc />}
         />
         <Route path="/admin/blog" element={isAdmin ? <Blog /> : <NotAcc />} />
+        <Route path="/admin/offer" element={isAdmin ? <Offer /> : <NotAcc />} />
       </Routes>
       <Footer />
     </BrowserRouter>

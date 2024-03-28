@@ -300,7 +300,76 @@ export const deleteUser=(id)=>async(dispatch)=>{
 }
 
 
-// Coupons
+// Offers
+
+export const GET_ALL_OFFER_REQUEST="GET_ALL_OFFER_REQUEST";
+export const GET_ALL_OFFER_SUCCESS="GET_ALL_OFFER_SUCCESS";
+export const GET_ALL_OFFER_FAIL="GET_ALL_OFFER_FAIL";
+
+
+export const DELETE_OFFER_REQUEST="DELETE_OFFER_REQUEST";
+export const DELETE_OFFER_SUCCESS="DELETE_OFFER_SUCCESS";
+export const DELETE_OFFER_FAIL="DELETE_OFFER_FAIL";
+
+
+export const ADD_OFFER_REQUEST="ADD_OFFER_REQUEST";
+export const ADD_OFFER_SUCCESS="ADD_OFFER_SUCCESS";
+export const ADD_OFFER_FAIL="ADD_OFFER_FAIL";
+
+export const addOffer=(offer)=>async(dispatch)=>{
+    try {
+        dispatch({type:ADD_OFFER_REQUEST})
+        const response=await axios.post(`/api/make-offer`,offer);
+        if(response.data.success){
+            const response=await axios.get(`/api/allOffers`);
+            if(response.data.success){
+                dispatch({type:GET_ALL_OFFER_SUCCESS,payload:response.data.offers});
+            }
+            dispatch({type:ADD_OFFER_SUCCESS,payload:response.data});
+            // toast.success("Coupon Created..");
+        }
+    } catch (error) {
+        console.log(error);
+        dispatch({type:ADD_OFFER_FAIL,payload:error.response.data.error})
+    }
+}
+
+
+
+export const deleteOffer=(id)=>async(dispatch)=>{
+    try {
+        dispatch({type:DELETE_OFFER_REQUEST});
+        const response=await axios.delete(`/api/delete-offer/${id}`);
+        if(response.data.success){
+            const response=await axios.get(`/api/allOffers`);
+            if(response.data.success){
+                dispatch({type:GET_ALL_OFFER_SUCCESS,payload:response.data.offers});
+            }
+            dispatch({type:DELETE_OFFER_SUCCESS,payload:response.data})
+            // toast.success("Coupon Deleted..")
+        }
+    } catch (error) {
+        console.log(error);
+        dispatch({type:DELETE_OFFER_FAIL,payload:error.response.data.error})
+    }
+}
+
+
+
+
+export const getAllOffers=()=>async(dispatch)=>{
+    try {
+        dispatch({type:GET_ALL_OFFER_REQUEST});
+        const response=await axios.get(`/api/allOffers`);
+        if(response.data.success){
+            dispatch({type:GET_ALL_OFFER_SUCCESS,payload:response.data.offers});
+        }
+    } catch (error) {
+        console.log(error);
+        dispatch({type:GET_ALL_OFFER_FAIL,payload:error.response.data.error})
+    }
+}
+
 
 export const addCoupon=(coupon)=>async(dispatch)=>{
     try {

@@ -12,6 +12,7 @@ const navigation = [
   { name: "Coupons", to: "/admin/coupon", current: false },
   { name: "Orders", to: "/admin/orders", current: false },
   { name: "Blogs", to: "/admin/blog", current: false },
+  { name: "Offers", to: "/admin/offer", current: false },
 ];
 
 function classNames(...classes) {

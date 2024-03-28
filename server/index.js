@@ -12,6 +12,7 @@ const couponRouter = require("./routes/couponRouter");
 const cartRouter = require("./routes/cartRouter");
 const adminRouter = require("./routes/adminRouter");
 const paymentRouter = require("./routes/paymentRoute");
+const offerRouter = require("./routes/offerRouter");
 const Razorpay = require("razorpay");
 
 dbConnection();
@@ -22,10 +23,10 @@ app.use(
   cors({
     credentials: true,
     origin: [
-      "https://musclesharks.in",
-      "https://www.musclesharks.in",
-      "http://195.35.7.215/",
-      // "http://localhost:5173",
+      // "https://musclesharks.in",
+      // "https://www.musclesharks.in",
+      // "http://195.35.7.215/",
+      "http://localhost:5173",
     ],
   })
 );
@@ -44,6 +45,7 @@ app.use("/api", orderRouter);
 app.use("/api", adminRouter);
 app.use("/api", couponRouter);
 app.use("/api", paymentRouter);
+app.use("/api", offerRouter);
 
 app.get("/", (req, res) => {
     res.json({ message: "Hello World" });
