@@ -16,7 +16,7 @@ function Offers() {
     <>
       {offer && offer.length > 0 ? (
         <>
-          <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+          <div className="h-56 sm:h-64 xl:h-[50rem] 2xl:h-[50rem] flex justify-center items-center">
             <Carousel slideInterval={3000}>
               {offer.map((e) => {
                 return (
