@@ -19,17 +19,19 @@ dbConnection();
 // app.use(express.static(path.resolve(__dirname, "dist")));
 
 
-app.use(
-  cors({
-    credentials: true,
-    origin: [
-      "https://musclesharks.in",
-      "https://www.musclesharks.in",
-      "http://195.35.7.215/",
-      // "http://localhost:5173",
-    ],
-  })
-);
+// app.use(
+//   cors({
+//     credentials: true,
+//     origin: [
+//       "https://musclesharks.in",
+//       "https://www.musclesharks.in",
+//       "http://195.35.7.215/",
+//       // "http://localhost:5173",
+//     ],
+//   })
+// );
+
+app.use(cors())
 app.use(cookieParser());
 app.use(express.json());
 
