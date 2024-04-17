@@ -5,10 +5,10 @@ const orderSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    // userName: {
-    //     type: String,
-    //     required: true
-    // },
+    userName: {
+        type: String,
+        required: true
+    },
     shippingAddress:{
         type:String,
         required:true
@@ -19,10 +19,10 @@ const orderSchema = new mongoose.Schema({
                 type: String,
                 required: true
             },
-            // quantity: {
-            //     type: Number,
-            //     required: true
-            // },
+            quantity: {
+                type: Number,
+                required: true
+            },
             variants: [  // Add this field to store variant information
             {
                 variantId: String,
@@ -31,9 +31,13 @@ const orderSchema = new mongoose.Schema({
         ]
         }
     ],
-    totalAmount: {
+    totalprice: {
         type: Number,
         required: true
+    },
+    orderType:{
+        type:String,
+        required:true,
     },
     status: {
         type: String,

@@ -138,6 +138,9 @@ export default function NavbarComp() {
                   <DropdownItem>
                     <NavLink to="/account">Account</NavLink>
                   </DropdownItem>
+                  <DropdownItem>
+                    <NavLink to="/user-orders">My Orders</NavLink>
+                  </DropdownItem>
                   <DropdownItem color="danger">
                     <p onClick={() => dispatch(logout(navigate))}>Logout</p>
                   </DropdownItem>

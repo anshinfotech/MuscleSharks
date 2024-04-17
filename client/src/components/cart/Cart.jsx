@@ -54,11 +54,10 @@ const Cart = () => {
   }, 0);
 
   let deliveryCharge = 0;
-  if (subtotal > 0 && subtotal<5000) {
+  if (subtotal > 0 && subtotal < 5000) {
     deliveryCharge = 50;
-  }
-  else if(subtotal>=5000){
-    deliveryCharge=100
+  } else if (subtotal >= 5000) {
+    deliveryCharge = 100;
   }
   const total = subtotal - discount + deliveryCharge;
 
@@ -191,7 +190,7 @@ const Cart = () => {
                 </div>
                 <div className="flex justify-between mb-2">
                   <span>Discounted Price:</span>
-                  <span>₹{subtotal-discount}</span>
+                  <span>₹{subtotal - discount}</span>
                 </div>
                 <div className="flex justify-between mb-2">
                   <span>Delivery charge:</span>
@@ -222,7 +221,7 @@ const Cart = () => {
                   >
                     Apply Coupon
                   </button>
-                  <Link to={"/checkout"}>
+                  <Link to={"/checkout" }>
                     <button className="bg-slate-700 text-white max-w-sm py-2 px-3 mt-1 rounded-md  mb-3">
                       Checkout
                     </button>

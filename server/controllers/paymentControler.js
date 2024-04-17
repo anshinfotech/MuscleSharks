@@ -6,8 +6,8 @@ const instance = new Razorpay({
   key_secret: process.env.RAZORPAY_API_SECRET,
 });
 
-console.log(process.env.RAZORPAY_API_KEY);
-console.log(process.env.RAZORPAY_API_SECRET);
+// console.log(process.env.RAZORPAY_API_KEY);
+// console.log(process.env.RAZORPAY_API_SECRET);
 
 const checkout = async (req, res) => {
   try {

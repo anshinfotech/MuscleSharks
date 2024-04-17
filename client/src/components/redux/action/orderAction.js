@@ -33,7 +33,7 @@ export const applyCoupon=(code,amount)=>async(dispatch)=>{
     try {
         dispatch({type:APPLY_COUPON_REQUEST})
         const response=await axios.post("/api/apply-coupon",{couponCode:code,orderAmount:amount});
-        // console.log("COUPONS",response);
+        console.log("COUPONS",response);
         if(response.data.success){
             dispatch({type:APPLY_COUPON_SUCCESS,payload:response.data.discount})
         }

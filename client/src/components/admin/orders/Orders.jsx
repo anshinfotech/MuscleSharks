@@ -5,8 +5,10 @@ import Status from "./Status";
 // import { Toaster } from "sonner";
 // import { Toaster } from 'react-hot-toast';
 import Nav from "../AdminNav";
+import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
 
 const Orders = () => {
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedStatus, setSelectedStatus] = useState("");
   const [filteredOrders, setFilteredOrders] = useState([]);
@@ -132,6 +134,7 @@ const Orders = () => {
         </select>
       </div>
 
+
       <div className="relative ml-10 mr-10 mt-12 overflow-x-auto shadow-md sm:rounded-lg">
       <div className="text-lg">Total Orders : <span className="text-green-800 font-bold">{orders.length}</span></div>
         {currentItems && currentItems.length > 0 ? (
@@ -152,6 +155,9 @@ const Orders = () => {
                 </th>
                 <th scope="col" className="px-6 py-3">
                   Price
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Payment Method
                 </th>
                 <th scope="col" className="px-6 py-3">
                   User ID
@@ -178,7 +184,8 @@ const Orders = () => {
                   <td className="px-6 py-4">
                     <Status status={order.status} id={order} />
                   </td>
-                  <td className="px-6 py-4">{order.totalAmount}</td>
+                  <td className="px-6 py-4">{order.totalprice}</td>
+                  <td className="px-6 py-4">{order.orderType}</td>
                   <td className="px-6 py-4">{order.user}</td>
                   {/* <td className="px-6 py-4">{order.userName}</td> */}
                   <td className="flex items-center px-6 py-4 space-x-3">

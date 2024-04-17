@@ -18,27 +18,18 @@ const Razorpay = require("razorpay");
 dbConnection();
 // app.use(express.static(path.resolve(__dirname, "dist")));
 
-
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin: [
-//       "https://musclesharks.in",
-//       "https://www.musclesharks.in",
-//       "http://195.35.7.215/",
-//       // "http://localhost:5173",
-//     ],
-//   })
-// );
-
-app.use(cors())
+app.use(
+  cors({
+    credentials: true,
+    origin: "http://localhost:5173",
+  })
+);
 app.use(cookieParser());
 app.use(express.json());
 
 // app.get("/", (req, res) => {
 //   res.sendFile(path.join(__dirname, "dist", "index.html"));
 // });
-
 
 app.use("/api", userRouter);
 app.use("/api", productRoutes);
@@ -50,8 +41,8 @@ app.use("/api", paymentRouter);
 app.use("/api", offerRouter);
 
 app.get("/", (req, res) => {
-    res.json({ message: "Hello World" });
-  });
+  res.json({ message: "Hello World" });
+});
 
 app.listen(process.env.PORT || 5000, () =>
   console.log(`Server is running on PORT ${process.env.PORT} ........`)
