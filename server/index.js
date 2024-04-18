@@ -21,7 +21,7 @@ dbConnection();
 app.use(
   cors({
     credentials: true,
-    origin: "https://musclesharks.in",
+    origin: "https://www.musclesharks.in",
   })
 );
 app.use(cookieParser());
