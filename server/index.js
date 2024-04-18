@@ -18,12 +18,20 @@ const Razorpay = require("razorpay");
 dbConnection();
 // app.use(express.static(path.resolve(__dirname, "dist")));
 
-app.use(
-  cors({
-    credentials: true,
-    origin: "https://www.musclesharks.in",
-  })
-);
+// app.use(
+//   cors({
+//     credentials: true,
+//     origin: "https://www.musclesharks.in",
+//   })
+// );
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://www.musclesharks.in');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
+
 app.use(cookieParser());
 app.use(express.json());
 
