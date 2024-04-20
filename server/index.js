@@ -16,13 +16,13 @@ const offerRouter = require("./routes/offerRouter");
 app.use(
   cors({
     credentials: true,
-    origin: "http://musclesharks.in",
+    origin: ["https://musclesharks.in","https://www.musclesharks.in"],
   })
 );
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "http://musclesharks.in"
+    ["http://musclesharks.in","http://www.musclesharks.in"]
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
