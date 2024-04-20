@@ -42,7 +42,7 @@ import PaymentSuccess from "./components/payment/Paymentsucess";
 import Delivery from "./pages/business_pages/Delivery";
 import Offer from "./components/admin/offers/Offers";
 
-axios.defaults.baseURL = "https://www.musclesharks.in";
+axios.defaults.baseURL = "http://api.musclesharks.in";
 axios.defaults.withCredentials = true;
 
 const App = () => {

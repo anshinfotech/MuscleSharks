@@ -62,38 +62,38 @@ const CheckoutPage = () => {
     // Dispatch the placeOrder action
     dispatch(placeOrder(orderData, navigate));
   };
-  // const handlePlaceOnlineOrder = async () => {
-  //   try {
-  //     // Prepare order data
-  //     const orderData = {
-  //       shippingAddress: address,
-  //       userName: name,
-  //       products: items.map((item) => ({
-  //         productName: item.name,
-  //         productId: item.productId,
-  //         variantId: item.variantId,
-  //         quantity: item.quantity,
-  //       })),
-  //       totalprice: total,
-  //       contact,
-  //     };
+  const handlePlaceOnlineOrder = async () => {
+    try {
+      // Prepare order data
+      const orderData = {
+        shippingAddress: address,
+        userName: name,
+        products: items.map((item) => ({
+          productName: item.name,
+          productId: item.productId,
+          variantId: item.variantId,
+          quantity: item.quantity,
+        })),
+        totalprice: total,
+        contact,
+      };
 
-  //     // Make API call to place order online
-  //     const response = await axios.post("/api/orderOnline", orderData);
+      // Make API call to place order online
+      const response = await axios.post("/api/orderOnline", orderData);
 
-  //     // Check if the response contains a payment URL
-  //     if (response.data.paymentUrl) {
-  //       // Redirect to the provided payment URL
-  //       window.location.href = response.data.paymentUrl;
-  //     } else {
-  //       // Handle case where payment URL is not provided
-  //       console.error("Payment URL not provided in response:", response.data);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error placing online order:", error);
-  //     // Handle error here
-  //   }
-  // };
+      // Check if the response contains a payment URL
+      if (response.data.paymentUrl) {
+        // Redirect to the provided payment URL
+        window.location.href = response.data.paymentUrl;
+      } else {
+        // Handle case where payment URL is not provided
+        console.error("Payment URL not provided in response:", response.data);
+      }
+    } catch (error) {
+      console.error("Error placing online order:", error);
+      // Handle error here
+    }
+  };
 
   return (
     <>
@@ -218,12 +218,12 @@ const CheckoutPage = () => {
             >
               Click for Cash On Delivery
             </button>
-            {/* <button
+            <button
               onClick={handlePlaceOnlineOrder}
               className="mt-6 bg-amber-300 text-white py-2 px-4 rounded-md hover:bg-amber-400  focus:bg-amber-500"
             >
               Pay Online
-            </button> */}
+            </button>
           </div>
         </div>
       </div>
