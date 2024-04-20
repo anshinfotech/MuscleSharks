@@ -58,7 +58,7 @@ const App = () => {
   const isAdmin = useSelector((state) => state.adminDetails.admin);
   return (
     <BrowserRouter>
-    <ScrollToTop/>
+      <ScrollToTop />
       <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
